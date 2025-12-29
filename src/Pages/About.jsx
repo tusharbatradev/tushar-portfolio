@@ -79,12 +79,6 @@ const About = () => {
         width: "100%",
       }}
     >
-      <Typography
-        variant="h5"
-        sx={{ fontWeight: 600, mb: 3, color: "#6b08f9" }}
-      >
-        About
-      </Typography>
       {/* FULL WIDTH – LINE BY LINE */}
       <Stack spacing={3} sx={{ width: "100%" }}>
         {/* EXPERIENCE */}

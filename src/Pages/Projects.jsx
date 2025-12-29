@@ -57,27 +57,11 @@ const Projects = () => {
       }}
       spacing={3}
     >
-      {/* Title */}
-      <Typography variant="h5" sx={{ fontWeight: 600, color: "#6b08f9" }}>
-        Projects
-      </Typography>
-
       {/* Responsive Grid */}
       <Box sx={{ width: "100%" }}>
-        <Grid
-          container
-          spacing={4}
-          justifyContent="center"
-        >
+        <Grid container spacing={4} justifyContent="center">
           {projects.map((project) => (
-            <Grid
-              item
-              key={project.id}
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-            >
+            <Grid item key={project.id} xs={12} sm={6} md={4} lg={3}>
               <ProjectCard {...project} />
             </Grid>
           ))}
