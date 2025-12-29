@@ -13,8 +13,11 @@ const ProjectCard = ({ image, title, description, github, live }) => {
     <Card
       sx={{
         width: 350,
+        height: 420, // fixed height for all cards
         borderRadius: 3,
         boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <CardMedia
@@ -25,12 +28,14 @@ const ProjectCard = ({ image, title, description, github, live }) => {
         sx={{ borderTopLeftRadius: 12, borderTopRightRadius: 12 }}
       />
 
-      <CardContent>
+      <CardContent
+        sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}
+      >
         <Typography variant="h6" fontWeight={600}>
           {title}
         </Typography>
 
-        <Typography variant="body2" sx={{ color: "gray", mt: 1 }}>
+        <Typography variant="body2" sx={{ color: "gray", mt: 1, flexGrow: 1 }}>
           {description}
         </Typography>
 
@@ -39,6 +44,7 @@ const ProjectCard = ({ image, title, description, github, live }) => {
             variant="contained"
             color="primary"
             size="small"
+            sx={{ flex: 1 }}
             onClick={() => window.open(github, "_blank")}
           >
             GitHub
@@ -48,6 +54,7 @@ const ProjectCard = ({ image, title, description, github, live }) => {
             variant="outlined"
             color="primary"
             size="small"
+            sx={{ flex: 1 }}
             onClick={() => window.open(live, "_blank")}
           >
             Live

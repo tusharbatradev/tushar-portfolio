@@ -1,9 +1,10 @@
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import React from "react";
+import { Grid, Typography, Stack, Box } from "@mui/material";
 import ProjectCard from "../Components/ProjectCard";
 import NetflixGPT from "../assets/NetflixGPT.png";
 import Headliner from "../assets/Headliner.png";
 import Streamify from "../assets/Streamify.png";
+import Bhagyarach from "../assets/Bhagyarach.png";
 
 export const projects = [
   {
@@ -35,45 +36,53 @@ export const projects = [
   },
   {
     id: 4,
-    image: "/images/threadle.png",
-    title: "Threadle",
+    image: Bhagyarach,
+    title: "Bhagya Rach Welfare Foundation",
     description:
-      "Kids clothing brand website focused on comfort, responsive design and clean UI.",
-    github: "https://github.com/yourrepo/threadle",
-    live: "https://threadle.com",
+      "Paid project: Responsive NGO website for Bhagya Rach, highlighting their mission, initiatives, and donation options.",
+    github: "https://github.com/tusharbatradev/bhagyarach-website",
+    live: "https://bhagyarach.org/",
   },
 ];
 
 const Projects = () => {
   return (
-    <Stack sx={{ padding: "10px 40px" }}>
+    <Stack
+      sx={{
+        minHeight: "100vh",
+        backgroundColor: "#fafafa",
+        px: { xs: 2, sm: 4 },
+        py: { xs: 4, sm: 6 },
+        width: "100%",
+      }}
+      spacing={3}
+    >
       {/* Title */}
-      <Typography
-        variant="h5"
-        sx={{ fontWeight: 600, mb: 3, color: "#6b08f9" }}
-      >
+      <Typography variant="h5" sx={{ fontWeight: 600, color: "#6b08f9" }}>
         Projects
       </Typography>
 
-      {/* Cards Row */}
-      <Stack
-        direction="row"
-        spacing={4}
-        flexWrap="wrap"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-      >
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            image={project.image}
-            title={project.title}
-            description={project.description}
-            github={project.github}
-            live={project.live}
-          />
-        ))}
-      </Stack>
+      {/* Responsive Grid */}
+      <Box sx={{ width: "100%" }}>
+        <Grid
+          container
+          spacing={4}
+          justifyContent="center"
+        >
+          {projects.map((project) => (
+            <Grid
+              item
+              key={project.id}
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+            >
+              <ProjectCard {...project} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </Stack>
   );
 };

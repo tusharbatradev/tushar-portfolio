@@ -79,6 +79,12 @@ const About = () => {
         width: "100%",
       }}
     >
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: 600, mb: 3, color: "#6b08f9" }}
+      >
+        About
+      </Typography>
       {/* FULL WIDTH – LINE BY LINE */}
       <Stack spacing={3} sx={{ width: "100%" }}>
         {/* EXPERIENCE */}
@@ -98,12 +104,12 @@ const About = () => {
                   frontend architecture and backend APIs.
                 </Typography>
                 <Typography component="li">
-                  Created reusable UI components and optimized
-                  state-management flows.
+                  Created reusable UI components and optimized state-management
+                  flows.
                 </Typography>
                 <Typography component="li">
-                  Implemented secure authentication and high-performance
-                  server logic.
+                  Implemented secure authentication and high-performance server
+                  logic.
                 </Typography>
               </Stack>
             </Stack>
