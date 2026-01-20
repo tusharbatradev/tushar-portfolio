@@ -103,8 +103,8 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          width: { xs: "350px", md: "600px" }, // same width for circle
-          height: { xs: "350px", md: "600px" }, // same height
+          width: { xs: "350px", md: "600px" }, 
+          height: { xs: "350px", md: "600px" }, 
           mt: { xs: 4, md: 0 },
         }}
       >
